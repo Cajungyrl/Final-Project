@@ -1,0 +1,37 @@
+from ast import If
+import string
+import random
+from tkinter.messagebox import NO, YES
+from xml.dom.pulldom import CHARACTERS
+
+## How many characters would you like to use?
+characters1 = list(string.ascii_letters + string.digits + "!@#$%^&*()")
+characters2 = list(string.ascii_letters + string.digits)
+
+def generate_random_password():
+	## length of password from user
+	length = int(input("Enter password length: "))
+	
+	## Special Characters
+	question = input("Are special characters required? (YES/NO)")
+	
+	If.question == YES
+	random.shuffle(characters1)
+	
+	If.question == NO
+	random.shuffle(characters2)
+	
+	## picking random characters from the list
+	password = []
+	for i in range (length):
+		password.append(random.choice(CHARACTERS))
+		
+	## shuffling the resultant password
+	random.shuffle(password)
+	
+	## converting the list to string
+	## printing the list
+	print("".join(password))
+	
+## invoking the function
+generate_random_password
